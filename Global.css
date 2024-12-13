@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+  }
+
+  /* Base styles */
+  body {
+    @apply bg-background text-foreground font-sans;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-900;
+  }
+
+  p {
+    @apply text-base text-gray-700 leading-relaxed;
+  }
+
+  a {
+    @apply text-primary underline hover:text-primary-foreground;
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /* Card styles */
+  .card {
+    @apply bg-card text-card-foreground border border-border rounded-lg shadow-md p-4 sm:p-6;
+  }
+
+  /* Button styles */
+  .button {
+    @apply bg-primary text-primary-foreground hover:bg-opacity-90 px-4 py-2 rounded-md font-semibold text-center;
+    width: fit-content;
+  }
+
+  /* Input styles */
+  .input {
+    @apply border border-border rounded-md p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  /* Utilities for responsiveness */
+  .responsive-text {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl;
+  }
+
+  .responsive-card {
+    @apply w-full sm:w-3/4 lg:w-1/2 mx-auto;
+  }
+
+  .responsive-image {
+    @apply w-full h-auto object-cover rounded-md;
+  }
+}
