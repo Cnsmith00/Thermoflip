@@ -5,4 +5,4 @@ ThermoFlip is an innovative web-based application designed to enhance user contr
 
 Frontend 70% Complete (React.js, Tailwind.css)
 
-Backend still in development (Node.js, MongoDB, Azure...)
+Backend still in development (Node.js, MySQL, Azure...)
